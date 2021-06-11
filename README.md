@@ -1,6 +1,6 @@
 # tripleDESanyfile
 Aim to develop a DES based encryption method to encrypt any kind of file.
-
+AND ALSO CONVERTING TO STANDALONE SINGLE APPLICATION FOR WINDOWS, LINUX, MAC OS SEPERATELY.
 
 IMPLEMENTED ON PYTHON 3.9.2
 Libraries: -
@@ -9,7 +9,7 @@ pycrypto (2.6.1)
 (Make sure you install and build all the depedencies required by above libraries)
 
 
-Tested on Linux and Windows based systems.
+Tested on Linux and Windows based systems. Will surely work on MAC OS if u install all dependencies.
 Can encrypt any kind of file (image, video also), you do not have to choose or do anything extra, just type the name of the file with correct format.
 Capability: - Max 300 MB file on 4GB RAM (i3 7th Gen 2.3 GHz processor)
 
@@ -24,6 +24,7 @@ Digital signature in form of SHA256 used
 Documentation provided in code
 CBC (Cipher block chaining used) - triple DES
 Initialization vector for CBC is derived from the password hash itself.
+
 
 
 Tested on Linux and Windows based systems.
