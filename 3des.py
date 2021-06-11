@@ -12,12 +12,12 @@
 
 
 #Password hashing Iterations - KEEP CONSTANT through out this application existence.
-pi=100001
+pi=100005
 
 #password SALT, This variable should remain constant throught out this application life. This will make RAINBOW HASH TABLES USELESS
 #For deactivating salting, just leave salt="" i.e. blank in paranthesis.
 #DO NOT CHANGE BELOW VALUE AT ANY COST-------------------------------------------------------------------------------------------
-salt_const=b"$ez*}-d3](%d%$#*!)$#%s45le$*fhuc*(%$$$%DFD3PUBGC0uNTERSTR!KEGL0BAL0FF#NS!VE#$%*(fghgdk5784654875456dgfdrrrrfgfs^"
+salt_const=b"$ez*}-d3](%d%$#*!)$#%s45le$*fhucdivyanshu75456dgfdrrrrfgfs^"
 #DO NOT CHANGE ABOVE VALUE AT ANY COST-------------------------------------------------------------------------------------------
 
 
