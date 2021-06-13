@@ -2,3 +2,4 @@
 2. Better password hashing method scrypt, ballon, argon2 etc.
 3. Graphic user interface
 4. COnverting into a library
+5. Standalone application for windows, linux, mac os, android etc
