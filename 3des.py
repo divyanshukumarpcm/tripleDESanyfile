@@ -83,17 +83,18 @@ def encryptor(path):
 	
 	
 	#Salting and hashing password
-	key_enc=PBKDF2(key_enc,salt_const,32,count=pi)
+	key_enc=PBKDF2(key_enc,salt_const,48,count=pi)
 
-		
+	
 	#Encrypting using triple 3 key DES	
+	print("			encrypting...")	
 	try:
-		print("			encrypting...")
+		
 		cipher1=DES.new(key_enc[0:8],DES.MODE_CBC,key_enc[24:32])
 		ciphertext1=cipher1.encrypt(image)
-		cipher2=DES.new(key_enc[8:16],DES.MODE_CBC,key_enc[24:32])
+		cipher2=DES.new(key_enc[8:16],DES.MODE_CBC,key_enc[32:40])
 		ciphertext2=cipher2.decrypt(ciphertext1)
-		cipher3=DES.new(key_enc[16:24],DES.MODE_CBC,key_enc[24:32])
+		cipher3=DES.new(key_enc[16:24],DES.MODE_CBC,key_enc[40:48])
 		ciphertext3=cipher3.encrypt(ciphertext2)
 		print("			!!!ENCRYPTION SUCCESSFUL!!!")
 	except:
@@ -165,15 +166,16 @@ def decryptor(encrypted_image_path):
 
 	
 	#salting and hashing password
-	key_dec=PBKDF2(key_dec,salt_const,32,count=pi)
+	key_dec=PBKDF2(key_dec,salt_const,48,count=pi)
 	
 
 	#decrypting using triple 3 key DES
+	print("			Decrypting...")
 	try:
-		print("			Decrypting...")
-		cipher1=DES.new(key_dec[16:24],DES.MODE_CBC,key_dec[24:32])
+		
+		cipher1=DES.new(key_dec[16:24],DES.MODE_CBC,key_dec[40:48])
 		plaintext1=cipher1.decrypt(encrypted_data)
-		cipher2=DES.new(key_dec[8:16],DES.MODE_CBC,key_dec[24:32])
+		cipher2=DES.new(key_dec[8:16],DES.MODE_CBC,key_dec[32:40])
 		plaintext2=cipher2.encrypt(plaintext1)
 		cipher3=DES.new(key_dec[0:8],DES.MODE_CBC,key_dec[24:32])
 		plaintext3=cipher3.decrypt(plaintext2)
