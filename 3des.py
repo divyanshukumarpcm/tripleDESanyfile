@@ -1,4 +1,4 @@
-#author:Divyanshu Kumar, ECE, NIT Silchar 
+#author:Divyanshu Kumar, ECE(2019-2023), NIT Silchar 
 #email-divyanshu_ug@ece.nits.ac.in
 #Date:  21 May 2021
 #Demo video of usage - https://youtu.be/qRKkrRrsw84
